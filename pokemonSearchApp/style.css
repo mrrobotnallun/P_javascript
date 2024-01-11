@@ -1,0 +1,100 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 414px; /* Breite des iPhone 12 Pro Max */
+    height: 800px; /* Höhe des iPhone 12 Pro Max */
+    background-color: #ee6d6d; /* Roter Farbton des Pokédex */
+    border: 5px solid #cb3e3e; /* Dunklerer Rand für einen 3D-Effekt */
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding: 60px 20px 20px; /* Platz oben für Blitze */
+}
+
+/* Blitze auf dem Pokédex */
+.container::before, .container::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 50px;
+    height: 20px;
+    background-color: #cb3e3e;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.container::before {
+    left: 50%;
+    transform: translateX(-60%);
+}
+
+.container::after {
+    right: 50%;
+    transform: translateX(60%);
+}
+
+#search-input {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px); /* Abstand von 20px auf beiden Seiten */
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #333;
+}
+
+#search-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    background-color: transparent;/* Grüner Farbton für den Button */
+    border: 2px solid darkred;
+    border-radius: 35px; /* Machen Sie den Button rund */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white; /* Textfarbe weiß für Kontrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px; /* Größe des 'S' */
+    font-weight: bold; /* Fettschrift für das 'S' */
+    line-height: 1; /
+}
+
+
+#pokemon-display {
+    overflow: auto;
+    background-color: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    box-shadow: inset 0 0 10px #000000; /* Innerer Schatten für Tiefe */
+}
+
+#sprite {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 50%; /* Kreisförmiger Sprite, ähnlich dem Bildschirm des Pokédex */
+    box-shadow: 0 0 10px #000000; /* Schatten um das Bild für einen 3D-Effekt */
+}
+
+datalist {
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+  }
