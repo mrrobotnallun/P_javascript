@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>US Telefonnummern-Validator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-200 flex justify-center items-center h-screen">
+    <div class="iphone">
+        <div class="screen">
+            <h2 class="text-lg font-bold mt-2 mb-4">US Telefonnummern-Validator</h2>
+            <p class="text-sm mb-2">Telefonnummer eingeben</p>
+            <input type="text" id="user-input" class="form-control w-full p-2" placeholder="Telefonnummer eingeben">
+            <div id="results-div" class="mt-2 p-2 bg-white w-full text-center"></div>
+            <div class="mt-auto">
+                <button id="check-btn" class="w-full mb-2 bg-blue-500 hover:bg-blue-700 text-white py-2 rounded">Prüfen</button>
+                <button id="clear-btn" class="w-full mb-2 bg-red-500 hover:bg-red-700 text-white py-2 rounded">Löschen</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
